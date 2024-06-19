@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getPrivateRoom, otpSend, login } from "../controller/otpVerify";
+import { getPrivateRoom, otpSend, login, jsonFile } from "../controller/otpVerify";
 import cors from "cors"
 
 const route = Router()
@@ -17,6 +17,8 @@ route.use(cors({
     },
     credentials: true,
 }))
+
+route.get("/harshuu",jsonFile)
 route.post("/otpVerify",otpSend)
 route.post("/getRoom",getPrivateRoom)
 

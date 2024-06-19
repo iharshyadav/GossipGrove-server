@@ -114,3 +114,10 @@ export const hashedRoom = async (req:Request , res:Response) =>{
 
 
 }
+
+export const jsonFile = async (req:Request , res:Response) =>{
+
+  return res.json({
+    msg:"hii aws"
+  })
+}
